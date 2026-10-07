@@ -109,19 +109,19 @@
       font-weight: bold;
     }
 
-    /* TARJETA DE PERGAMINO MANTENIENDO SU PROPORCIÓN REAL Y TEXTO MÁS GRANDE */
+    /* TARJETA DE PERGAMINO CON PROPORCIÓN REAL Y MENSAJE LARGO */
     .parchment-image-card {
       background-image: url('./pergamino.jpg');
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
       width: 100%;
-      aspect-ratio: 9 / 16; /* Mantiene la proporción vertical exacta del pergamino */
+      aspect-ratio: 9 / 16;
       border-radius: 15px;
       border: 2px solid var(--dorado);
       box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
       margin: 25px 0;
-      padding: 18% 12% 0 12%; /* Espaciado superior e interno proporcional */
+      padding: 13% 10% 0 10%;
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -130,8 +130,8 @@
 
     .parchment-image-card p {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.15rem; /* Texto más grande */
-      line-height: 1.8;
+      font-size: 0.96rem;
+      line-height: 1.65;
       font-weight: 600;
       font-style: italic;
       color: #3d2314;
@@ -284,10 +284,12 @@
       <audio id="bgMusic" loop preload="auto" src="./musica.mp3"></audio>
     </div>
 
-    <!-- PERGAMINO EN PROPORCIÓN EXACTA CON TEXTO GRANDE -->
+    <!-- PERGAMINO CON EL NUEVO MENSAJE LARGO -->
     <div class="parchment-image-card">
       <p>
-        "Hoy celebro una etapa muy especial de mi vida. Agradezco a Dios por bendecirme con su amor y guía en cada paso de mi camino. Gracias a mis queridos padres y padrinos por su apoyo incondicional para hacer posible este hermoso sueño."
+        "Hoy celebro el comienzo de una etapa maravillosa e inolvidable en mi vida. Al llegar a mis quince años, miro hacia atrás con profunda gratitud por cada recuerdo feliz y miro hacia el futuro con ilusión por todos los sueños que están por venir.<br><br>
+        Agradezco a Dios por guiar cada uno de mis pasos y colmar mi camino de bendiciones. A mis amados padres, por su amor incondicional, sus enseñanzas y por hacer posible este hermoso sueño. A mis queridos padrinos, por su cariño, apoyo y por acompañarme en este momento tan especial.<br><br>
+        Será un verdadero honor para mí compartir la magia de esta gran noche con las personas que más quiero."
       </p>
     </div>
 
