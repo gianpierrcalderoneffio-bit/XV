@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mis XV Años - María Fernanda</title>
   <!-- Fuentes de Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -13,8 +13,6 @@
       --dorado-brillante: #f9e29c;
       --rojo-borgona: #580612;
       --rojo-oscuro: #2a0006;
-      --pergamino-fondo: #f5eaad;
-      --pergamino-texto: #3d2314;
     }
 
     * {
@@ -25,8 +23,7 @@
 
     body {
       background-color: #120003;
-      background-image: 
-        radial-gradient(circle at 50% 20%, #4a030e 0%, #120003 80%);
+      background-image: radial-gradient(circle at 50% 20%, #4a030e 0%, #120003 80%);
       color: var(--dorado-brillante);
       font-family: 'Montserrat', sans-serif;
       text-align: center;
@@ -112,42 +109,28 @@
       font-weight: bold;
     }
 
-    /* PERGAMINO ESTILIZADO DEL VIDEO */
-    .parchment-wrapper {
-      position: relative;
-      margin: 30px 0;
-      padding: 10px 0;
-    }
-
-    .parchment-scroll-top, .parchment-scroll-bottom {
-      background: linear-gradient(90deg, #3d0309 0%, #8b0a1a 50%, #3d0309 100%);
-      height: 18px;
-      border-radius: 10px;
+    /* TARJETA DE PERGAMINO USANDO LA IMAGEN DEL USUARIO */
+    .parchment-image-card {
+      background-image: url('./pergamino.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 15px;
       border: 2px solid var(--dorado);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      position: relative;
-      z-index: 2;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+      margin: 25px 0;
+      padding: 55px 30px 230px 30px; /* Padding inferior amplio para no tapar a Bella, la Bestia ni la rosa */
+      text-align: center;
     }
 
-    .parchment-body {
-      background: linear-gradient(180deg, #fceeb5 0%, #f3df93 50%, #e9d17d 100%);
-      color: var(--pergamino-texto);
-      border-left: 4px solid var(--dorado);
-      border-right: 4px solid var(--dorado);
-      padding: 30px 22px;
-      margin: -5px 12px;
-      box-shadow: inset 0 0 25px rgba(110, 50, 10, 0.3), 0 10px 20px rgba(0,0,0,0.5);
-      position: relative;
-      z-index: 1;
-    }
-
-    .parchment-body p {
+    .parchment-image-card p {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       line-height: 1.7;
-      font-weight: 500;
+      font-weight: 600;
       font-style: italic;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+      color: #3d2314;
+      text-shadow: 0 0 3px rgba(255, 248, 220, 0.8);
     }
 
     /* Banners Rojos Elegantes */
@@ -178,7 +161,6 @@
       margin-bottom: 10px;
     }
 
-    /* Íconos de Personajes */
     .character-icon {
       font-size: 2rem;
       margin: 8px 0;
@@ -297,15 +279,11 @@
       <audio id="bgMusic" loop preload="auto" src="./musica.mp3"></audio>
     </div>
 
-    <!-- DEDICATORIA EN PERGAMINO ESTILO EL VIDEO -->
-    <div class="parchment-wrapper">
-      <div class="parchment-scroll-top"></div>
-      <div class="parchment-body">
-        <p>
-          "Hoy celebro una etapa muy especial de mi vida. Agradezco a Dios por bendecirme con su amor y guía en cada paso de mi camino. Gracias a mis queridos padres y padrinos por su apoyo incondicional para hacer posible este hermoso sueño."
-        </p>
-      </div>
-      <div class="parchment-scroll-bottom"></div>
+    <!-- SECCIÓN CON EL PERGAMINO REAL DE TU IMAGEN -->
+    <div class="parchment-image-card">
+      <p>
+        "Hoy celebro una etapa muy especial de mi vida. Agradezco a Dios por bendecirme con su amor y guía en cada paso de mi camino. Gracias a mis queridos padres y padrinos por su apoyo incondicional para hacer posible este hermoso sueño."
+      </p>
     </div>
 
     <!-- Sección Mis Padres (Con la Sra. Potts y Chip) -->
@@ -342,7 +320,7 @@
       <div class="time-box"><span id="seconds">--</span><label>Segundos</label></div>
     </div>
 
-    <!-- Fecha y Recepción (Estilo Princesa Bella) -->
+    <!-- Fecha y Recepción -->
     <div class="card-frame">
       <h3 style="font-family: 'Cinzel'; font-size: 1.4rem; color: var(--dorado-brillante);">Sábado, 7 de Noviembre de 2026</h3>
       
