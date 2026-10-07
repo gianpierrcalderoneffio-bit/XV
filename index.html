@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mis XV Años - María Fernanda</title>
   <!-- Fuentes de Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;1,400;1,600;1,700&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -109,28 +109,33 @@
       font-weight: bold;
     }
 
-    /* TARJETA DE PERGAMINO USANDO LA IMAGEN DEL USUARIO */
+    /* TARJETA DE PERGAMINO MANTENIENDO SU PROPORCIÓN REAL Y TEXTO MÁS GRANDE */
     .parchment-image-card {
       background-image: url('./pergamino.jpg');
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
+      width: 100%;
+      aspect-ratio: 9 / 16; /* Mantiene la proporción vertical exacta del pergamino */
       border-radius: 15px;
       border: 2px solid var(--dorado);
       box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
       margin: 25px 0;
-      padding: 55px 30px 230px 30px; /* Padding inferior amplio para no tapar a Bella, la Bestia ni la rosa */
+      padding: 18% 12% 0 12%; /* Espaciado superior e interno proporcional */
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
       text-align: center;
     }
 
     .parchment-image-card p {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
-      line-height: 1.7;
+      font-size: 1.15rem; /* Texto más grande */
+      line-height: 1.8;
       font-weight: 600;
       font-style: italic;
       color: #3d2314;
-      text-shadow: 0 0 3px rgba(255, 248, 220, 0.8);
+      text-shadow: 0 0 2px rgba(255, 248, 220, 0.9);
     }
 
     /* Banners Rojos Elegantes */
@@ -279,14 +284,14 @@
       <audio id="bgMusic" loop preload="auto" src="./musica.mp3"></audio>
     </div>
 
-    <!-- SECCIÓN CON EL PERGAMINO REAL DE TU IMAGEN -->
+    <!-- PERGAMINO EN PROPORCIÓN EXACTA CON TEXTO GRANDE -->
     <div class="parchment-image-card">
       <p>
         "Hoy celebro una etapa muy especial de mi vida. Agradezco a Dios por bendecirme con su amor y guía en cada paso de mi camino. Gracias a mis queridos padres y padrinos por su apoyo incondicional para hacer posible este hermoso sueño."
       </p>
     </div>
 
-    <!-- Sección Mis Padres (Con la Sra. Potts y Chip) -->
+    <!-- Sección Mis Padres -->
     <div class="red-banner"><span>Mis Padres</span></div>
     <span class="character-icon" title="Sra. Potts y Chip">🫖☕</span>
     <div class="names-list">
@@ -294,7 +299,7 @@
       Nombre de la Madre
     </div>
 
-    <!-- Sección Mis Padrinos (Con Lumiere y Din Don) -->
+    <!-- Sección Mis Padrinos -->
     <div class="red-banner"><span>Mis Padrinos</span></div>
     <span class="character-icon" title="Lumiere y Din Don">🕯️🕰️</span>
     <div class="names-list">
@@ -302,7 +307,7 @@
       Nombre de la Padrina
     </div>
 
-    <!-- Nombre de la Quinceañera en Marco Real -->
+    <!-- Nombre de la Quinceañera -->
     <div class="name-badge">
       <p style="font-family: 'Cinzel'; font-size: 0.9rem; letter-spacing: 2px;">TIENEN EL HONOR DE INVITARLOS A CELEBRAR LOS XV AÑOS DE:</p>
       <h2 class="name-title">María Fernanda Guadalupe<br>Cacho Valverde</h2>
@@ -375,9 +380,8 @@
 
   </div>
 
-  <!-- JavaScript de la Música y Cuenta Regresiva -->
+  <!-- JavaScript para Música y Reloj -->
   <script>
-    // Reproductor de Música
     function toggleMusic() {
       const music = document.getElementById('bgMusic');
       const musicBtn = document.getElementById('musicBtn');
@@ -398,7 +402,6 @@
       }
     }
 
-    // Cuenta regresiva exacta para el 7 de Noviembre de 2026 a las 19:00 hrs
     const eventDate = new Date("2026-11-07T19:00:00").getTime();
 
     function updateCountdown() {
