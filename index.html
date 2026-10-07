@@ -221,7 +221,8 @@
         <button class="play-btn" id="musicBtn" onclick="toggleMusic()">▶</button>
         <span style="font-size: 0.85rem;">Dale play para escuchar la canción</span>
       </div>
-      <audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+      <!-- Archivo de música local con precarga explícita -->
+      <audio id="bgMusic" loop preload="auto" src="./musica.mp3"></audio>
     </div>
 
     <!-- Pergamino de Dedicatoria -->
@@ -310,14 +311,21 @@
 
   <!-- JavaScript para Música y Reloj -->
   <script>
-    // Control de Música
-    const music = document.getElementById('bgMusic');
-    const musicBtn = document.getElementById('musicBtn');
-
+    // Control de Música con gestión de errores
     function toggleMusic() {
+      const music = document.getElementById('bgMusic');
+      const musicBtn = document.getElementById('musicBtn');
+
       if (music.paused) {
-        music.play();
-        musicBtn.textContent = '❚❚';
+        const playPromise = music.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            musicBtn.textContent = '❚❚';
+          }).catch(error => {
+            console.error("Error al reproducir el archivo de audio:", error);
+            alert("No se pudo cargar el audio. Verifica que el archivo en GitHub se llame exactamente 'musica.mp3' en minúsculas.");
+          });
+        }
       } else {
         music.pause();
         musicBtn.textContent = '▶';
