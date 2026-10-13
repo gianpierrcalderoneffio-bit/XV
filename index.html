@@ -9,7 +9,7 @@
   
   <style>
     :root {
-      /* Paleta de colores extraída de tu imagen */
+      /* Paleta de colores */
       --rojo-tinto: #5b0609;        /* Centro: Rojo Borgoña Tinto */
       --rojo-profundo: #280103;     /* Fondo base */
       --dorado-calido: #dbb782;     /* Derecha: Dorado Cálido */
@@ -82,6 +82,33 @@
       position: relative;
     }
 
+    /* RECUADRO DE CONTRASTE PARA EL MENSAJE (REEMPLAZA AL PERGAMINO) */
+    .message-card {
+      background-color: var(--crema-marfil);
+      border: 3px double var(--dorado-calido);
+      border-radius: 20px;
+      padding: 30px 22px;
+      margin: 25px 0;
+      box-shadow: 0 0 20px rgba(219, 183, 130, 0.4), inset 0 0 15px rgba(91, 6, 9, 0.1);
+      position: relative;
+    }
+
+    .message-card p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--rojo-tinto);
+      text-align: center;
+    }
+
+    .message-card .rose-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
     /* Reproductor de Música */
     .music-player {
       background: rgba(0, 0, 0, 0.5);
@@ -108,35 +135,6 @@
       justify-content: center;
       color: var(--rojo-tinto);
       font-weight: bold;
-    }
-
-    /* TARJETA DE PERGAMINO */
-    .parchment-image-card {
-      background-image: url('./pergamino.jpg');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      border-radius: 15px;
-      border: 2px solid var(--dorado-calido);
-      box-shadow: 0 0 25px rgba(219, 183, 130, 0.35);
-      margin: 25px 0;
-      padding: 13% 10% 0 10%;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .parchment-image-card p {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.96rem;
-      line-height: 1.65;
-      font-weight: 600;
-      font-style: italic;
-      color: #3d2314;
-      text-shadow: 0 0 2px rgba(255, 248, 220, 0.9);
     }
 
     /* Banners Rojos Elegantes */
@@ -284,8 +282,9 @@
       <audio id="bgMusic" loop preload="auto" src="./musica.mp3"></audio>
     </div>
 
-    <!-- PERGAMINO CON DEDICATORIA -->
-    <div class="parchment-image-card">
+    <!-- RECUADRO CON DEDICATORIA EN ALTO CONTRASTE -->
+    <div class="message-card">
+      <span class="rose-icon">🌹</span>
       <p>
         "Hoy celebro el comienzo de una etapa maravillosa e inolvidable en mi vida. Al llegar a mis quince años, miro hacia atrás con profunda gratitud por cada recuerdo feliz y miro hacia el futuro con ilusión por todos los sueños que están por venir.<br><br>
         Agradezco a Dios por guiar cada uno de mis pasos y colmar mi camino de bendiciones. A mis amados padres, por su amor incondicional, sus enseñanzas y por hacer posible este hermoso sueño. A mis queridos padrinos, por su cariño, apoyo y por acompañarme en este momento tan especial.<br><br>
@@ -352,6 +351,9 @@
     <div class="card-frame">
       <div class="red-banner" style="margin-top: 0;"><span>Código de Vestimenta</span></div>
       <p style="font-size: 1.15rem; margin-top: 10px; color: var(--crema-marfil);"><b>Sport Elegante 👔👗</b></p>
+      <p style="font-size: 0.9rem; margin-top: 10px; color: var(--crema-marfil); line-height: 1.4;">
+        🚫 <i>Prohibido vestir en color <b>champagne</b> y <b>vino</b>.</i>
+      </p>
     </div>
 
     <!-- Regalos / Lluvia de Sobres -->
